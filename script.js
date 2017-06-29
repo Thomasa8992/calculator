@@ -1,10 +1,11 @@
 var clearBtn = $('#clear'),
-addBtn = $('#add')
+addBtn = $('#add'),
 numArray = [];
 $(document).ready(function(){
     handleSpan();
     handleNum();
-    handleClear()
+    handleClear();
+    handlePlus();
 });
 
 function handleNum(){
@@ -28,8 +29,12 @@ function handleClear(){
 }
 
 function handlePlus(a , b){
-    $(addbtn).on('click', function(){
-        console.log(addBtn);
+    $(addBtn).on('click', function(){
+        if(addBtn){
+            var readoutVal = $('#readout').val();
+            numArray.push;
+            console.log(numArray);
+        }
     })
 }
     
