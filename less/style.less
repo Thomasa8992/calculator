@@ -1,3 +1,12 @@
+.grey {
+    background-color: grey;
+}
+.white {
+    background-color: white;
+}
+.highlight {
+    background-color: yellow;
+}
 * {
     margin: 0;
     padding: 0;
@@ -23,11 +32,13 @@ body {
 
     #readout{
         height: 100px;
-        width: 84.5%;
+        width: 83%;
         background-color: white;
         transform: translateX(9%) translateY(106%);
         border: 3px solid black;
-        
+        font-size: 60px;
+        line-height: 100px;
+        flex-wrap: wrap;
     }
 
     span {
@@ -35,7 +46,6 @@ body {
         display: inline-block;
         width: 20%;
         height: 100px;
-        background-color: white;
         border: 3px solid black;
         transform: translateX(38%) translateY(190%);
         line-height:100px;
