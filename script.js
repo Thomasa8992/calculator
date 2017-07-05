@@ -16,8 +16,9 @@ newNum = false;
 
 
 $(document).ready(function(){
+    clearZero();
     handleSpan();
-    handleNum();
+    // handleNum();
     handleAdd();
     handleSub();
     handleDiv();
@@ -26,12 +27,19 @@ $(document).ready(function(){
     handleClear();
 
 });
-//Appends any numBtn to the readout
+// Appends any numBtn to the readout
+function clearZero(){
+    $(readout).append('0');
+    newNum=true;
+    if(newNum === true){
+        handleNum();
+    }
+}
 function handleNum(){
     $('.num').on('mousedown', function() {
         var numText = $(this).text();
         $(readout).append(numText);
-        if(newNum === true){
+         if(newNum === true){
             $(readout).empty();
             newNum = false;       
             $(readout).append(numText);
